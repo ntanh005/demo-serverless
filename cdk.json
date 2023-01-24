@@ -38,6 +38,16 @@
     "@aws-cdk/aws-ecs:disableExplicitDeploymentControllerForCircuitBreaker": true,
     "@aws-cdk/aws-iam:importedRoleStackSafeDefaultPolicyName": true,
     "@aws-cdk/aws-s3:serverAccessLogsUseBucketPolicy": true,
-    "@aws-cdk/customresources:installLatestAwsSdkDefault": false
+    "@aws-cdk/customresources:installLatestAwsSdkDefault": false,
+    "qa": {
+      "lambda": {
+        "name": "demo-function",
+        "alias": "live",
+        "stage": "qa"
+      },
+      "region": "ap-southeast-1",
+      "account": "210133173206"
+    },
+    "prefix": "demo-stack"
   }
 }
