@@ -46,7 +46,19 @@
         "stage": "qa"
       },
       "region": "ap-southeast-1",
-      "account": "210133173206"
+      "account": "210133173206",
+      "repository": {
+        "name": "ntanh005/demo-serverless",
+        "branch": "feature/pipeline"
+      },
+      "pipeline": {
+        "name": "demo-cdk-pipeline"
+      },
+      "tags": {
+        "App":"cdk-workshop",
+        "Environment": "QA",
+        "IaC": "CDK"
+      }
     },
     "prefix": "demo-stack"
   }

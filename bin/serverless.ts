@@ -2,6 +2,7 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { ServerlessStack } from '../lib/serverless-stack';
+import { PipeLineStack } from '../lib/pipeline-stack';
 
 const app = new cdk.App();
 const environmentType = app.node.tryGetContext("environmentType") || 'qa'
@@ -13,7 +14,7 @@ const account = app.node.tryGetContext("account");
 const stack_name = `${app.node.tryGetContext("prefix")}-${environmentType}`;
 
 
-new ServerlessStack(app, stack_name, {
+new PipeLineStack(app, "demo-cdk-pipeline-stack", {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
