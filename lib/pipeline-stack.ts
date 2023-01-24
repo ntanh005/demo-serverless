@@ -22,7 +22,7 @@ export class PipeLineStack extends Stack {
             input: sourceStage,
             installCommands: [
                 "npm install -g aws-cdk",
-                "mvn clean package"
+                "npm install"
             ],
             commands: [
                 "cdk synth -c environmentType=$ENV_TYPE"
